@@ -2,9 +2,11 @@
 
 A Vercel project demonstrating bidirectional streaming with ANSI color output.
 
+Current status: broken. Vercel buffers all request body.
+
 ## Features
 
-- **Request Streaming**: Accepts streaming input via `curl -N -T -`
+- **Request Streaming**: Accepts PUT streaming
 - **Response Streaming**: Echoes back each line wrapped in random ANSI colors
 - **Real-time Processing**: Processes data as it arrives, no buffering
 
@@ -24,14 +26,14 @@ Then in another terminal:
 
 ```bash
 # Stream input to the server
-echo -e "Hello\nWorld\nStreaming\nDemo" | curl -N -T - http://localhost:3000/
+echo -e "Hello\nWorld\nStreaming\nDemo" | curl -NT- http://localhost:3000/
 ```
 
 Or interactively:
 
 ```bash
 # Type lines and see them echoed back in color
-curl -N -T - http://localhost:3000/
+curl -NT- http://localhost:3000/
 ```
 
 ### Deploy to Vercel
@@ -43,7 +45,7 @@ vercel --prod
 Then use your deployed URL:
 
 ```bash
-echo -e "Hello\nWorld" | curl -N -T - https://your-project.vercel.app/
+echo -e "Hello\nWorld" | curl -NT- https://your-project.vercel.app/
 ```
 
 ## How It Works
