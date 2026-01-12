@@ -1,4 +1,4 @@
-# NTV - Streaming Demo
+# Streaming Demo on Vercel
 
 A Vercel project demonstrating bidirectional streaming with ANSI color output.
 
