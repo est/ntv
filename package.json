@@ -1,0 +1,16 @@
+{
+    "name": "ntv-streaming-demo",
+    "version": "1.0.0",
+    "description": "Vercel streaming demo with ANSI colors",
+    "main": "api/stream.js",
+    "scripts": {
+        "dev": "vercel dev"
+    },
+    "keywords": [
+        "streaming",
+        "vercel",
+        "ansi"
+    ],
+    "author": "",
+    "license": "MIT"
+}
